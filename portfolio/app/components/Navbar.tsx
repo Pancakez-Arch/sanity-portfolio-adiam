@@ -56,7 +56,9 @@ export function Navbar() {
       </div>
 
       <div className="flex items-center md:col-span-3 justify-end col-span-6">
-        <Button>Contact Me</Button>
+        <Button className="hidden sm:flex" asChild>
+          <a href="mailto:adiamyonas12@gmail.com">Contact Me</a>
+        </Button>
         <div className="sm:hidden, md:hidden">
           <MobileMenu />
         </div>
