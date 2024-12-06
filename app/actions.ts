@@ -21,5 +21,12 @@ export async function postData(formData: FormData) {
             message: message,
         }
     });
-    revalidatePath("/guestbook")
+
+    if (!data) {
+        throw new Error("Failed to create guestbook entry");
+    }
+
+    revalidatePath("/guestbook");
+
+    return data;
 }
